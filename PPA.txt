@@ -1,6 +1,99 @@
 
-fuioe3hwgklh32gklhl	ewjgklh	3logj	Ò32jtiodjsgkljs—LGJK—LWGH	WJGK—LJKLBH—J{QE
+def residuo(variable):
+    print("""
+        El resultado es:    
+    """)
+    print int(variable[1])%int(variable[2])
+    raw_input("presiona Enter para continuar")
 
-pene
+
+def BtH(orden, numero):
+    largo=len(numero)/4
+    sobra=len(numero)%4
+    x=0
+    resultado=""
+    aux=0
+    while not x<=largo:
+        y=0
+        while not y==4:
+            if numero[x*4+0]==0 and numero[x*4+1]==0 and numero[x*4+2]==0 and numero[x*4+3]==0:
+                resultado="0"+resultado
+            if numero[x*4+0]==0 and numero[x*4+1]==0 and numero[x*4+2]==0 and numero[x*4+3]==1:
+                resultado="1"+resultado
+            if numero[x*4+0]==0 and numero[x*4+1]==0 and numero[x*4+2]==1 and numero[x*4+3]==0:
+                resultado="2"+resultado
+            if numero[x*4+0]==0 and numero[x*4+1]==0 and numero[x*4+2]==1 and numero[x*4+3]==1:
+                resultado="3"+resultado
+            if numero[x*4+0]==0 and numero[x*4+1]==1 and numero[x*4+2]==0 and numero[x*4+3]==0:
+                resultado="4"+resultado
+            if numero[x*4+0]==0 and numero[x*4+1]==1 and numero[x*4+2]==0 and numero[x*4+3]==1:
+                resultado="5"+resultado
+            if numero[x*4+0]==0 and numero[x*4+1]==1 and numero[x*4+2]==1 and numero[x*4+3]==0:
+                resultado="6"+resultado
+            if numero[x*4+0]==0 and numero[x*4+1]==1 and numero[x*4+2]==1 and numero[x*4+3]==1:
+                resultado="7"+resultado
+            if numero[x*4+0]==1 and numero[x*4+1]==0 and numero[x*4+2]==0 and numero[x*4+3]==0:
+                resultado="8"+resultado
+            if numero[x*4+0]==1 and numero[x*4+1]==0 and numero[x*4+2]==0 and numero[x*4+3]==1:
+                resultado="9"+resultado
+            if numero[x*4+0]==1 and numero[x*4+1]==0 and numero[x*4+2]==1 and numero[x*4+3]==0:
+                resultado="A"+resultado
+            if numero[x*4+0]==1 and numero[x*4+1]==0 and numero[x*4+2]==1 and numero[x*4+3]==1:
+                resultado="B"+resultado
+            if numero[x*4+0]==1 and numero[x*4+1]==1 and numero[x*4+2]==0 and numero[x*4+3]==0:
+                resultado="C"+resultado
+            if numero[x*4+0]==1 and numero[x*4+1]==1 and numero[x*4+2]==0 and numero[x*4+3]==1:
+                resultado="D"+resultado
+            if numero[x*4+0]==1 and numero[x*4+1]==1 and numero[x*4+2]==1 and numero[x*4+3]==0:
+                resultado="E"+resultado
+            if numero[x*4+0]==1 and numero[x*4+1]==1 and numero[x*4+2]==1 and numero[x*4+3]==1:
+                resultado="F"+resultado
+            y=y+1
+    print resultado
+
+
+
+
+
+
+
+
+
+    raw_input("presiona Enter para continuar")        
+
+
+salir=False;
+
+while not salir:
+
+    print("""
+        SUM Funcion de suma
+        MUL Funcion de multiplicar
+        DIV Funcion de dividir
+        RES Funcion de residuo
+        EXP Funcion de exponente
+        RZ  Funcion de raiz
+        BD  Funcion binario-decimal
+        BH  Funcion binario-hexadecimal
+        HD  Funcion hexadecimal-decimal
+        PRI Funcion rango de numeros primos
+        NP  Funcion numero primo
+        HP  Ayuda sobre funciones
+        S   Salir de aplicacion
+
+    """)
+    ejecutar=raw_input("""Bienvenido
+    """)
+
+    if ejecutar=="S" or ejecutar=="s":
+        salir=True
+    
+    funcion=ejecutar.split(" ")
+
+    if funcion[0]=="RES":
+        residuo(funcion)
+
+    if funcion[0]=="BH":
+        BtH(funcion[1], funcion[2])
 
 
