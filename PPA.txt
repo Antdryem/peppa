@@ -61,6 +61,69 @@ def BtH(orden, numero):
 
     raw_input("presiona Enter para continuar")        
 
+def NP(X):
+    X=int(raw_input("Teclea el numero limite:"))
+    Contador=2
+    EsPrimo=True
+    Contador2=2
+    while(Contador2<X):
+        EsPrimo=True
+        Contador=2
+        while(Contador<Contador2):
+            if(Contador2 % Contador == 0):
+                EsPrimo=False 
+            Contador=Contador+1
+        if(EsPrimo):
+            print str(Contador2)+ " Es Primo"
+        Contador2=Contador2+1
+
+
+################# luis
+
+#Suma
+#Luis Enrique Romero Leyva
+def SUM(numeros):
+    numeros=int(raw_input("Cantidad de numeros a sumar: "))
+    suma=0
+    while numeros>0:
+        numero=int(raw_input("Numero a sumar: "))
+        suma=suma+numero
+        numeros=numeros-1
+    print (suma)
+
+#Decimal a Binario
+#Luis Enrique Romero Leyva
+def BD(numero):
+    numero = int(raw_input("Introduzca el número a convertir: "))
+    base = 2
+
+    def cambio_base(decimal, base):
+        conversion = ''
+        while decimal // base != 0:
+            conversion = str(decimal % base) + conversion
+            decimal = decimal // base
+        return str(decimal) + conversion
+
+    print ("El número "+str(numero)+" es igual a "+str(cambio_base(numero, base))+" en sistema binario")
+
+
+##########david
+
+
+def MUL(nmul):
+    print ("Multiplicacion: \n")
+    nmul=float(raw_input("Cuantos valores desea multiplicar?"))
+    r=1
+    if nmul == 1 :
+        print ("Se necesitan al menos dos valores")
+        nmul=0
+    while(nmul != 0):
+        x=float(raw_input(""))
+        r=float(r)*x
+        nmul=float(nmul)-1
+    print ("El resultado es: ")+str(r)
+
+
 
 salir=False;
 
@@ -96,65 +159,18 @@ while not salir:
     if funcion[0]=="BH":
         BtH(funcion[1], funcion[2])
 
+    if funcion[0]=="NP":
+        NP(0)
 
-############## hit
+    if funcion[0]=="BD":
+        BD(0)
 
-X=int(raw_input("Teclea el numero limite:"))
-Contador=2
-EsPrimo=True
-Contador2=2
-while(Contador2<X):
-    EsPrimo=True
-    Contador=2
-    while(Contador<Contador2):
-        if(Contador2 % Contador == 0):
-            EsPrimo=False 
-        Contador=Contador+1
-    if(EsPrimo):
-        print str(Contador2)+ " Es Primo"
-    Contador2=Contador2+1
+    if funcion[0]=="SUM":
+        SUM(0)
+
+    if funcion[0]=="MUL":
+        MUL(0)
 
 
-################# luis
-
-#Suma
-#Luis Enrique Romero Leyva
-numeros=int(input("Cantidad de numeros a sumar: "))
-suma=0
-while numeros>0:
-    numero=int(input("Numero a sumar: "))
-    suma=suma+numero
-    numeros=numeros-1
-print (suma)
-
-#Decimal a Binario
-#Luis Enrique Romero Leyva
-numero = int(input("Introduzca el número a convertir: "))
-base = 2
-
-def cambio_base(decimal, base):
-    conversion = ''
-    while decimal // base != 0:
-        conversion = str(decimal % base) + conversion
-        decimal = decimal // base
-    return str(decimal) + conversion
-
-print ("El número "+str(numero)+" es igual a "+str(cambio_base(numero, base))+" en sistema binario")
-
-
-##########davi
-
-
-print ("Multiplicacion: \n")
-n=float(input("Cuantos valores desea multiplicar?"))
-r=1
-if n == 1 :
-    print ("Se necesitan al menos dos valores")
-    n=0
-while(n != 0):
-    x=float(input(""))
-    r=float(r)*x
-    n=float(n)-1
-print ("El resultado es: ")+str(r)
 
 
