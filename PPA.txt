@@ -147,6 +147,7 @@ while not salir:
 
 
 
+##################shiro
 
     raw_input("presiona Enter para continuar")        
 
@@ -166,6 +167,11 @@ def NP(X):
             print str(Contador2)+ " Es Primo"
         Contador2=Contador2+1
 
+def DIV(Divisor):
+	Divisor = int(raw_input("Escribe cuanto vale el divisor "))
+	Dividente = int(raw_input("Escribe cuanto vale el dividente "))
+	Resultado = Divisor/Dividente
+	print ("El resultado es " + str(Resultado))
 
 ################# luis
 
@@ -212,6 +218,32 @@ def MUL(nmul):
         nmul=float(nmul)-1
     print ("El resultado es: ")+str(r)
 
+def RZ(inp):
+    print ("Raices: \n")
+    inp=raw_input("Inserte numero y exponente: ").split()
+    n=int(inp[0])
+    if(len(inp) == 1):
+        exp=2
+    else:
+        exp=int(inp[1])
+    if(n >= 0):
+        r=""
+        if(exp >= 0):
+            r=n**(1.0/exp)
+            print ("El resultado es: ")+str(r)
+        else:
+            print("Favor de introducir un exponente positivo")
+    elif(n < 0): 
+        if(exp % 2 == 0 ):
+            print("El resultado es un numero imaginario")
+        else:
+            r=""
+            if(exp >= 0):
+                print("Favor de introducir un numero positivo")
+            else:
+                print("Favor de introducir un exponente positivo")
+            
+            print ("El resultado es: ")+str(r)
 
 
 salir=False;
@@ -260,6 +292,10 @@ while not salir:
     if funcion[0]=="MUL":
         MUL(0)
 
+    if funcion[0]=="RZ":
+        RZ(0)
 
+    if funcion[0]=="DIV":
+        DIV(0)
 
 
