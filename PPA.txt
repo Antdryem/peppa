@@ -94,62 +94,11 @@ salir=False
 
 
 
-
-
-
-while not salir:
-
-    print("""
-        SUM Funcion de suma
-        MUL Funcion de multiplicar
-        DIV Funcion de dividir
-        RES Funcion de residuo
-        EXP Funcion de exponente
-        RZ  Funcion de raiz
-        BD  Funcion binario-decimal
-        BH  Funcion binario-hexadecimal
-        HD  Funcion hexadecimal-decimal
-        PRI Funcion rango de numeros primos
-        NP  Funcion numero primo
-        HP  Ayuda sobre funciones
-        S   Salir de aplicacion
-
-    """)
-    ejecutar=raw_input("""Bienvenido
-    """)
-
-    if ejecutar=="S" or ejecutar=="s":
-        salir=True
-    
-    funcion=ejecutar.split(" ")
-
-    if funcion[0]=="RES":
-        residuo(funcion)
-
-    if funcion[0]=="BH":
-        BtH(funcion[1], funcion[2])
-
-    if funcion[0]=="NP":
-        NP(0)
-
-    if funcion[0]=="BD":
-        BD(0)
-
-    if funcion[0]=="SUM":
-        SUM(0)
-
-    if funcion[0]=="MUL":
-        MUL(0)
-
-
-
 #####     AQUI ACABA LO CHIDO :v
 
 
 
 ##################shiro
-
-    raw_input("presiona Enter para continuar")        
 
 def NP(X):
     X=int(raw_input("Teclea el numero limite:"))
@@ -213,7 +162,7 @@ def MUL(nmul):
         print ("Se necesitan al menos dos valores")
         nmul=0
     while(nmul != 0):
-        x=float(raw_input(""))
+        x=float(raw_input("Numero:"))
         r=float(r)*x
         nmul=float(nmul)-1
     print ("El resultado es: ")+str(r)
@@ -244,6 +193,19 @@ def RZ(inp):
                 print("Favor de introducir un exponente positivo")
             
             print ("El resultado es: ")+str(r)
+
+def PRI(input):
+    print "Numeros primos en un rango: \n"
+    input= raw_input("Inserte los limites inferior y superior: ").split()
+    numero1=int(input[0])
+    numero2=int(input[1])
+    for x in range(numero1,numero2+1):
+        contador = 0
+        for num in range(1,x+1):
+            if (x % num == 0):
+                contador = contador + 1
+        if (contador==2):
+            print "El numero "+str(x)+" es primo"
 
 
 salir=False;
@@ -298,4 +260,6 @@ while not salir:
     if funcion[0]=="DIV":
         DIV(0)
 
+    if funcion[0]=="PRI":
+        PRI(0)
 
