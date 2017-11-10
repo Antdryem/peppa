@@ -7,88 +7,140 @@ def residuo(variable):
 
 
 def BtH(orden, numero):
-    largo=len(numero)/4
-    sobra=len(numero)%4
-    x=0
-    resultado=""
-    aux=0
-    while x<largo:
-        y=0
+    if orden=="0":
+        largo=len(numero)/4
+        sobra=len(numero)%4
+        x=0
+        resultado=""
+        aux=0
+        while x<largo:
+            y=0
        
-        if numero[x*4+0]=="0" and numero[x*4+1]=="0" and numero[x*4+2]=="0" and numero[x*4+3]=="0":
-            resultado="0"+resultado
-        if numero[x*4+0]=="0" and numero[x*4+1]=="0" and numero[x*4+2]=="0" and numero[x*4+3]=="1":
-            resultado="1"+resultado
-        if numero[x*4+0]=="0" and numero[x*4+1]=="0" and numero[x*4+2]=="1" and numero[x*4+3]=="0":
-            resultado="2"+resultado
-        if numero[x*4+0]=="0" and numero[x*4+1]=="0" and numero[x*4+2]=="1" and numero[x*4+3]=="1":
-            resultado="3"+resultado
-        if numero[x*4+0]=="0" and numero[x*4+1]=="1" and numero[x*4+2]=="0" and numero[x*4+3]=="0":
-            resultado="4"+resultado
-        if numero[x*4+0]=="0" and numero[x*4+1]=="1" and numero[x*4+2]=="0" and numero[x*4+3]=="1":
-            resultado="5"+resultado
-        if numero[x*4+0]=="0" and numero[x*4+1]=="1" and numero[x*4+2]=="1" and numero[x*4+3]=="0":
-            resultado="6"+resultado
-        if numero[x*4+0]=="0" and numero[x*4+1]=="1" and numero[x*4+2]=="1" and numero[x*4+3]=="1":
-            resultado="7"+resultado
-        if numero[x*4+0]=="1" and numero[x*4+1]=="0" and numero[x*4+2]=="0" and numero[x*4+3]=="0":
-            resultado="8"+resultado
-        if numero[x*4+0]=="1" and numero[x*4+1]=="0" and numero[x*4+2]=="0" and numero[x*4+3]=="1":
-            resultado="9"+resultado
-        if numero[x*4+0]=="1" and numero[x*4+1]=="0" and numero[x*4+2]=="1" and numero[x*4+3]=="0":
-            resultado="A"+resultado
-        if numero[x*4+0]=="1" and numero[x*4+1]=="0" and numero[x*4+2]=="1" and numero[x*4+3]=="1":
-            resultado="B"+resultado
-        if numero[x*4+0]=="1" and numero[x*4+1]=="1" and numero[x*4+2]=="0" and numero[x*4+3]=="0":
-            resultado="C"+resultado
-        if numero[x*4+0]=="1" and numero[x*4+1]=="1" and numero[x*4+2]=="0" and numero[x*4+3]=="1":
-            resultado="D"+resultado
-        if numero[x*4+0]=="1" and numero[x*4+1]=="1" and numero[x*4+2]=="1" and numero[x*4+3]=="0":
-            resultado="E"+resultado
-        if numero[x*4+0]=="1" and numero[x*4+1]=="1" and numero[x*4+2]=="1" and numero[x*4+3]=="1":
-            resultado="F"+resultado
+            if numero[x*4+0]=="0" and numero[x*4+1]=="0" and numero[x*4+2]=="0" and numero[x*4+3]=="0":
+                resultado="0"+resultado
+            if numero[x*4+0]=="0" and numero[x*4+1]=="0" and numero[x*4+2]=="0" and numero[x*4+3]=="1":
+                resultado="1"+resultado
+            if numero[x*4+0]=="0" and numero[x*4+1]=="0" and numero[x*4+2]=="1" and numero[x*4+3]=="0":
+                resultado="2"+resultado
+            if numero[x*4+0]=="0" and numero[x*4+1]=="0" and numero[x*4+2]=="1" and numero[x*4+3]=="1":
+                resultado="3"+resultado
+            if numero[x*4+0]=="0" and numero[x*4+1]=="1" and numero[x*4+2]=="0" and numero[x*4+3]=="0":
+                resultado="4"+resultado
+            if numero[x*4+0]=="0" and numero[x*4+1]=="1" and numero[x*4+2]=="0" and numero[x*4+3]=="1":
+                resultado="5"+resultado
+            if numero[x*4+0]=="0" and numero[x*4+1]=="1" and numero[x*4+2]=="1" and numero[x*4+3]=="0":
+                resultado="6"+resultado
+            if numero[x*4+0]=="0" and numero[x*4+1]=="1" and numero[x*4+2]=="1" and numero[x*4+3]=="1":
+                resultado="7"+resultado
+            if numero[x*4+0]=="1" and numero[x*4+1]=="0" and numero[x*4+2]=="0" and numero[x*4+3]=="0":
+                resultado="8"+resultado
+            if numero[x*4+0]=="1" and numero[x*4+1]=="0" and numero[x*4+2]=="0" and numero[x*4+3]=="1":
+                resultado="9"+resultado
+            if numero[x*4+0]=="1" and numero[x*4+1]=="0" and numero[x*4+2]=="1" and numero[x*4+3]=="0":
+                resultado="A"+resultado
+            if numero[x*4+0]=="1" and numero[x*4+1]=="0" and numero[x*4+2]=="1" and numero[x*4+3]=="1":
+                resultado="B"+resultado
+            if numero[x*4+0]=="1" and numero[x*4+1]=="1" and numero[x*4+2]=="0" and numero[x*4+3]=="0":
+                resultado="C"+resultado
+            if numero[x*4+0]=="1" and numero[x*4+1]=="1" and numero[x*4+2]=="0" and numero[x*4+3]=="1":
+                resultado="D"+resultado
+            if numero[x*4+0]=="1" and numero[x*4+1]=="1" and numero[x*4+2]=="1" and numero[x*4+3]=="0":
+                resultado="E"+resultado
+            if numero[x*4+0]=="1" and numero[x*4+1]=="1" and numero[x*4+2]=="1" and numero[x*4+3]=="1":
+                resultado="F"+resultado
             
-        x=x+1
+            x=x+1
 
-    pene=""
-    x=0
-    while x<sobra:
-        if numero[(largo-1)+x]=="1":
-            pene="1"+pene
-        else:
-            pene="0"+pene
-        x=x+1
+        pene=""
+        x=0
+        while x<sobra:
+            if numero[(largo-1)+x]=="1":
+                pene="1"+pene
+            else:
+                pene="0"+pene
+            x=x+1
 
-    if pene=="000":
-        resultado="0"+resultado
-    if pene=="001":
-        resultado="1"+resultado
-    if pene=="010":
-        resultado="2"+resultado
-    if pene=="011":
-        resultado="3"+resultado
-    if pene=="100":
-        resultado="4"+resultado
-    if pene=="101":
-        resultado="5"+resultado
-    if pene=="110":
-        resultado="6"+resultado
-    if pene=="111":
-        resultado="7"+resultado
-    if pene=="00":
-        resultado="0"+resultado
-    if pene=="01":
-        resultado="1"+resultado
-    if pene=="10":
-        resultado="2"+resultado
-    if pene=="11":
-        resultado="3"+resultado
-    if pene=="0":
-        resultado="0"+resultado
-    if pene=="1":
-        resultado="1"+resultado
+        if pene=="000":
+            resultado="0"+resultado
+        if pene=="001":
+            resultado="1"+resultado
+        if pene=="010":
+            resultado="2"+resultado
+        if pene=="011":
+            resultado="3"+resultado
+        if pene=="100":
+            resultado="4"+resultado
+        if pene=="101":
+            resultado="5"+resultado
+        if pene=="110":
+            resultado="6"+resultado
+        if pene=="111":
+            resultado="7"+resultado
+        if pene=="00":
+            resultado="0"+resultado
+        if pene=="01":
+            resultado="1"+resultado
+        if pene=="10":
+            resultado="2"+resultado
+        if pene=="11":
+            resultado="3"+resultado
+        if pene=="0":
+            resultado="0"+resultado
+        if pene=="1":
+            resultado="1"+resultado
     
-    print resultado
+        print resultado
+    else:
+        if orden=="1":
+            x=0
+            salida=""
+            while x<len(numero):
+                if numero[x]=="0":
+                    salida=salida+"0000"
+                if numero[x]=="1":
+                    salida=salida+"0001"
+                if numero[x]=="2":
+                    salida=salida+"0010"
+                if numero[x]=="3":
+                    salida=salida+"0011"
+                if numero[x]=="4":
+                    salida=salida+"0100"
+                if numero[x]=="5":
+                    salida=salida+"0101"
+                if numero[x]=="6":
+                    salida=salida+"0110"
+                if numero[x]=="7":
+                    salida=salida+"0111"
+                if numero[x]=="8":
+                    salida=salida+"1000"
+                if numero[x]=="9":
+                    salida=salida+"1001"
+                if numero[x]=="A":
+                    salida=salida+"1010"
+                if numero[x]=="B":
+                    salida=salida+"1011"
+                if numero[x]=="C":
+                    salida=salida+"1100"
+                if numero[x]=="D":
+                    salida=salida+"1101"
+                if numero[x]=="E":
+                    salida=salida+"1110"
+                if numero[x]=="F":
+                    salida=salida+"1111"
+
+                x=x+1
+            print(salida)
+        else:
+            print("No mame compa; 0 para B a H, 1 para H a B")
+
+
+
+
+
+
+
+
+
 
 salir=False
 

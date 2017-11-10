@@ -1,0 +1,19 @@
+Emilio Antón:
+
+	Funcion Binario a Hexadecimal:
+		
+		Estatus: Terminada.
+
+	La funcion de utiliza ingresando tres valores en la misma con el siguiente formato:
+
+			BH X W
+
+		BH: Codigo clave de la funcion.
+		X:    Valor binario que decide en que modo funcionara la funcion(0 para ir de binario 			a hexadecimal, 1 para ir de hexadecimal a binario).
+		W:    Numero a convertir.
+
+	Validaciones:
+		Si ingresas un numero/caracter que no sea 1 o 0 en X, la funcion te lo indicara.
+		Si ingresas algun caracter que no sea numerico en W, este sera ignorado
+		Si ingresas mal el codigo clave de la funcion, esta no se ejecutara
+		Si ingresas palabras extras al codigo para llamar a la funcion, estas seran ignoradas.
