@@ -1,4 +1,4 @@
-Emilio Antón:
+>>>Emilio Antón:
 
 	Funcion Binario a Hexadecimal:
 		
@@ -42,3 +42,17 @@ Emilio Antón:
 
 	Validaciones:
 		Si escribes mal una funcion, esta no sera ejecutada
+
+
+>>>David Serna:
+
+--Semana del 6-10 de Noviembre--
+
+	Funcion Multiplicacion:
+		Pregunta el numero de valores que se van a multiplicar, y luego pide los valores uno por uno. Al final devuelve el resultado de la multiplicacion de los valores.
+
+	Funcion Raices:
+		Se instertan dos valores separados por un espacio, el numero del que se sacara la raiz, y el exponente de la raiz, en ese orden. Devuelve el resultado.
+
+	Funcion Numeros primos en un rango definido:
+		Se insertan dos valores separados por un espacio, los limites inferior y superior del rango definido. Se calculan cuales de los numeros en ese rango son numeros primo, y devuelve una lista con esos numeros.
