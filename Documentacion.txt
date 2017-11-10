@@ -17,3 +17,28 @@ Emilio Antón:
 		Si ingresas algun caracter que no sea numerico en W, este sera ignorado
 		Si ingresas mal el codigo clave de la funcion, esta no se ejecutara
 		Si ingresas palabras extras al codigo para llamar a la funcion, estas seran ignoradas.
+
+
+	Funcion Residuo de division:
+		
+		Estatus: Terminada.
+
+	La funcion de utiliza ingresando tres valores en la misma con el siguiente formato:
+
+			RES X W
+		RES: Codigo clave de la funcion.
+		X:   Dividendo.
+		W:   Divisor.
+
+	Validaciones:
+		Ninguna de momento :=)
+
+
+	Menú:
+		
+		Estatus: Terminada.
+
+	Es la interfaz en la que llamas a la funcion. Al dar enter escanea lo escrito y busca si hay comandos compatibles con las funciones registradas.
+
+	Validaciones:
+		Si escribes mal una funcion, esta no sera ejecutada
