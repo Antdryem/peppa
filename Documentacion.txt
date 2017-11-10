@@ -6,6 +6,14 @@
 
 	La funcion de utiliza ingresando tres valores en la misma con el siguiente formato:
 
+>>>Emilio Antón:
+
+	Funcion Binario a Hexadecimal:
+		
+		Estatus: Terminada.
+
+	La funcion de utiliza ingresando tres valores en la misma con el siguiente formato:
+
 			BH X W
 
 		BH: Codigo clave de la funcion.
@@ -69,3 +77,17 @@ mis funciones son:
 	esta funcion calcula los numeros en un rango definido, 
 	tu le pones un rango limite y la funcion te mostrara 
 	los numeros que son primos en ese rango definido.
+
+>>> Luis
+Reporte de la Segunda semana de Noviembre
+
+1.Función Suma:
+	Suma una cantidad de numeros definida por el usuario
+
+2.Función Decimal a Binario:
+	Convierte un numero definido por el usuario del sistema decimal al sistema 
+	Binario
+
+3.Función Exponentes
+	Eleva un numero definido por el usuario a una potencia definida por el usuario, si
+	no se define una potencia, por defecto la eleva al cuadrado
