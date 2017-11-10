@@ -202,6 +202,15 @@ def BD(numero):
 
     print ("El número "+str(numero)+" es igual a "+str(cambio_base(numero, base))+" en sistema binario")
 
+#Exponente
+#Luis Enrique Romero Leyva
+def EXP(Valores):
+    Valores=int(raw_input("Introduzca el numero elevar: "))
+    Exponente=int(raw_input("Introduzca el numero a elevar: "))
+    resultado=Valores**Exponente
+    print str(Valores)+" a la "+str(Exponente)+" es igual a "+str(resultado)
+
+
 
 ##########david
 
@@ -315,3 +324,5 @@ while not salir:
     if funcion[0]=="PRI":
         PRI(0)
 
+    if funcion[0]=="EXP":
+        EXP(0)
