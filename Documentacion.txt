@@ -95,3 +95,7 @@ Reporte de la Segunda semana de Noviembre
 3.Función Exponentes
 	Eleva un numero definido por el usuario a una potencia definida por el usuario, si
 	no se define una potencia, por defecto la eleva al cuadrado
+
+Reporte semanal del 13 al 17
+Comentatios:
+	Se agregaron los comentarios al codigo de las funciones y se intentó iniciar el manejo de errores. 
