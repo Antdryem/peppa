@@ -179,36 +179,36 @@ def DIV(Divisor):
 #Suma
 #Luis Enrique Romero Leyva
 def SUM(numeros):
-    numeros=int(raw_input("Cantidad de numeros a sumar: "))
+    numeros=int(raw_input("Cantidad de numeros a sumar: "))         #Se define la cantidad de numeros que se van a sumar
     suma=0
     while numeros>0:
-        numero=int(raw_input("Numero a sumar: "))
-        suma=suma+numero
+        numero=int(raw_input("Numero a sumar: "))                   #Se ingresan los numeros que se van a sumar
+        suma=suma+numero                                            #Se suman los numeros ingresados
         numeros=numeros-1
-    print (suma)
+    print (suma)                                                    #Se imprime el resultado
 
 #Decimal a Binario
 #Luis Enrique Romero Leyva
 def BD(numero):
-    numero = int(raw_input("Introduzca el número a convertir: "))
-    base = 2
+    numero = int(raw_input("Introduzca el número a convertir: "))   #Introduce el numero que se desea convertir
+    base = 2                                                        #Se define que se va a cambiar a base 2 (Binario)
 
-    def cambio_base(decimal, base):
+    def cambio_base(decimal, base):                                 #Se define la operación para el cambio de base
         conversion = ''
         while decimal // base != 0:
-            conversion = str(decimal % base) + conversion
+            conversion = str(decimal % base) + conversion           
             decimal = decimal // base
         return str(decimal) + conversion
 
-    print ("El número "+str(numero)+" es igual a "+str(cambio_base(numero, base))+" en sistema binario")
+    print ("El número "+str(numero)+" es igual a "+str(cambio_base(numero, base))+" en sistema binario")    #Se imprime el resultado de la operación
 
 #Exponente
 #Luis Enrique Romero Leyva
 def EXP(Valores):
-    Valores=int(raw_input("Introduzca el numero elevar: "))
-    Exponente=int(raw_input("Introduzca el numero a elevar: "))
-    resultado=Valores**Exponente
-    print str(Valores)+" a la "+str(Exponente)+" es igual a "+str(resultado)
+    Valores=int(raw_input("Introduzca el numero elevar: "))                     #Se ingresa el numero a elevar
+    Exponente=int(raw_input("Introduzca el numero a elevar: "))                 #Se ingresa la potencia a la que e quiere elevar
+    resultado=Valores**Exponente                                                #Se realiza la operación de elevar el numero a la potencia
+    print str(Valores)+" a la "+str(Exponente)+" es igual a "+str(resultado)    #Se imprime el resultado
 
 
 
