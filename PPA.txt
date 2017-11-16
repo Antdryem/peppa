@@ -2,17 +2,20 @@ def residuo(variable):
     print("""
         El resultado es:    
     """)
+#aqui calcula e imprime el residuo
     print int(variable[1])%int(variable[2])
     raw_input("presiona Enter para continuar")
 
 
 def BtH(orden, numero):
+#elige en que orden va a hacer la conversion
     if orden=="0":
         largo=len(numero)/4
         sobra=len(numero)%4
         x=0
         resultado=""
         aux=0
+#convierte de 4 en 4 cada uno de llos valores 
         while x<largo:
             y=0
        
@@ -50,7 +53,7 @@ def BtH(orden, numero):
                 resultado="F"+resultado
             
             x=x+1
-
+#convierte los digitos restantes del numero que se desea convertir
         pene=""
         x=0
         while x<sobra:
@@ -91,6 +94,7 @@ def BtH(orden, numero):
     
         print resultado
     else:
+#convierte de uno por uno los numeros decimales para pasarlos en binario
         if orden=="1":
             x=0
             salida=""
@@ -131,6 +135,7 @@ def BtH(orden, numero):
                 x=x+1
             print(salida)
         else:
+#si se escribio mal el comando saldra esto
             print("No mame compa; 0 para B a H, 1 para H a B")
 
 
