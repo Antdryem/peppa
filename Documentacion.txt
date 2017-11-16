@@ -65,6 +65,10 @@
 	Funcion Numeros primos en un rango definido:
 		Se insertan dos valores separados por un espacio, los limites inferior y superior del rango definido. Se calculan cuales de los numeros en ese rango son numeros primo, y devuelve una lista con esos numeros.
 
+--Semana del 13-17 de Noviembre--
+
+	Agregados comentarios.
+	En proceso de arreglar errores (no terminado)
 
 >>> Hitshiro
 Reporte de la Segunda semana de Noviembre

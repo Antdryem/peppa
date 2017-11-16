@@ -215,11 +215,11 @@ def EXP(Valores):
 ##########david
 
 
-def MUL(nmul):
+def MUL(nmul):                                                        #Multiplicacion
     print ("Multiplicacion: \n")
     nmul=float(raw_input("Cuantos valores desea multiplicar?"))
     r=1
-    if nmul == 1 :
+    if nmul == 1 :                                                    #evita que se ponga un solo numero para multiplicar
         print ("Se necesitan al menos dos valores")
         nmul=0
     while(nmul != 0):
@@ -228,11 +228,11 @@ def MUL(nmul):
         nmul=float(nmul)-1
     print ("El resultado es: ")+str(r)
 
-def RZ(inp):
+def RZ(inp):                                                          #Raices
     print ("Raices: \n")
     inp=raw_input("Inserte numero y exponente: ").split()
     n=int(inp[0])
-    if(len(inp) == 1):
+    if(len(inp) == 1):                                     #si se da un exponente, es por default 2
         exp=2
     else:
         exp=int(inp[1])
@@ -242,10 +242,10 @@ def RZ(inp):
             r=n**(1.0/exp)
             print ("El resultado es: ")+str(r)
         else:
-            print("Favor de introducir un exponente positivo")
+            print("Favor de introducir un exponente positivo")        #evitar operaciones imposibles
     elif(n < 0): 
         if(exp % 2 == 0 ):
-            print("El resultado es un numero imaginario")
+            print("El resultado es un numero imaginario")             
         else:
             r=""
             if(exp >= 0):
@@ -255,7 +255,7 @@ def RZ(inp):
             
             print ("El resultado es: ")+str(r)
 
-def PRI(input):
+def PRI(input):                                          #numeros primos en un rango definido
     print "Numeros primos en un rango: \n"
     input= raw_input("Inserte los limites inferior y superior: ").split()
     numero1=int(input[0])
