@@ -1,4 +1,4 @@
->>>Emilio Antón:
+>>>Emilio AntÃ³n:
 
 	Funcion Binario a Hexadecimal:
 		
@@ -6,7 +6,7 @@
 
 	La funcion de utiliza ingresando tres valores en la misma con el siguiente formato:
 
->>>Emilio Antón:
+>>>Emilio AntÃ³n:
 
 	Funcion Binario a Hexadecimal:
 		
@@ -42,7 +42,7 @@
 		Ninguna de momento :=)
 
 
-	Menú:
+	MenÃº:
 		
 		Estatus: Terminada.
 
@@ -76,29 +76,34 @@
 >>> Hitshiro
 Reporte de la Segunda semana de Noviembre
 mis funciones son: 
-1- división:
+1- divisiÃ³n:
 	calcula la divicion de un numero con numero, en otras 
 	palabras pide un numero para el divisor y para el dividente,
-	en simples palabras solo estara haciendo una simple dividión
+	en simples palabras solo estara haciendo una simple dividiÃ³n
 2- Numeros primos en un rango definido:
 	esta funcion calcula los numeros en un rango definido, 
 	tu le pones un rango limite y la funcion te mostrara 
 	los numeros que son primos en ese rango definido.
-
+Reporte Tercera semana de Noviembre
+3- Hexadecimal a decimal:
+	esta funcion convierte los numeros hexadecimales a decimales
+	solo aceptando numeros y las letras de A a la F
+	
+Yeah! Acabe
 >>> Luis
 Reporte de la Segunda semana de Noviembre
 
-1.Función Suma:
+1.FunciÃ³n Suma:
 	Suma una cantidad de numeros definida por el usuario
 
-2.Función Decimal a Binario:
+2.FunciÃ³n Decimal a Binario:
 	Convierte un numero definido por el usuario del sistema decimal al sistema 
 	Binario
 
-3.Función Exponentes
+3.FunciÃ³n Exponentes
 	Eleva un numero definido por el usuario a una potencia definida por el usuario, si
 	no se define una potencia, por defecto la eleva al cuadrado
 
 Reporte semanal del 13 al 17
 Comentatios:
-	Se agregaron los comentarios al codigo de las funciones y se intentó iniciar el manejo de errores. 
+	Se agregaron los comentarios al codigo de las funciones y se intentÃ³ iniciar el manejo de errores. 
