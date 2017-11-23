@@ -178,6 +178,63 @@ def DIV(Divisor):
 	Dividente = int(raw_input("Escribe cuanto vale el dividente "))
 	Resultado = Divisor/Dividente
 	print ("El resultado es " + str(Resultado))
+	
+def HD():
+	A=10
+	B=11
+	C=12
+	D=13
+	E=14
+	F=15
+	lista_permitida=["1","2","3","4","5","6","7","8","9","0","A","B","C","E","F"]
+	lista_letras=["A","B","C","D","E","F"]
+	lista_hexa=[]
+	completo=False
+	suma=0
+	hexadecimiliador=16
+	sumador=0
+	comprobar=0
+	hexa=raw_input("Ingrese el numero hexadecimal: ").upper()
+	contador=int(len(hexa))-1
+	while(contador>=0):
+	    lista_hexa.append(hexa[contador])
+	    contador-=1
+	
+	while(comprobar<len(lista_hexa)):
+	    if(lista_hexa[comprobar] in lista_permitida):
+	        comprobar+=1
+	    else:
+	        lista_hexa=[]
+	        contador=0
+	        comprobar=0
+	        hexa=raw_input("Ingrese el numero hexadecimal: ").upper()
+	        contador=int(len(hexa))-1
+	        while(contador>=0):
+	            lista_hexa.append(hexa[contador])
+	            contador-=1
+	
+	
+	while (sumador<len(lista_hexa)):
+	    if(lista_hexa[sumador] in lista_letras):
+	        if(lista_hexa[sumador] =="A"):
+	            suma+=(A*(hexadecimiliador**sumador))
+	        if(lista_hexa[sumador] =="B"):
+	            suma+=(B*(hexadecimiliador**sumador))
+	        if(lista_hexa[sumador] =="C"):
+	            suma+=(C*(hexadecimiliador**sumador))
+	        if(lista_hexa[sumador] =="D"):
+	            suma+=(D*(hexadecimiliador**sumador))
+	        if(lista_hexa[sumador] =="E"):
+	            suma+=(E*(hexadecimiliador**sumador))
+	        if(lista_hexa[sumador] =="F"):
+	            suma+=(F*(hexadecimiliador**sumador))
+	    else:
+	        suma+=(int(lista_hexa[sumador])*(hexadecimiliador**sumador))
+	    sumador+=1
+	print""
+	print""
+	print "El equivalente en decimal es: "+suma
+
 
 ################# luis
 
@@ -195,24 +252,24 @@ def SUM(numeros):
 #Decimal a Binario
 #Luis Enrique Romero Leyva
 def BD(numero):
-    numero = int(raw_input("Introduzca el número a convertir: "))   #Introduce el numero que se desea convertir
+    numero = int(raw_input("Introduzca el nÃºmero a convertir: "))   #Introduce el numero que se desea convertir
     base = 2                                                        #Se define que se va a cambiar a base 2 (Binario)
 
-    def cambio_base(decimal, base):                                 #Se define la operación para el cambio de base
+    def cambio_base(decimal, base):                                 #Se define la operaciÃ³n para el cambio de base
         conversion = ''
         while decimal // base != 0:
             conversion = str(decimal % base) + conversion           
             decimal = decimal // base
         return str(decimal) + conversion
 
-    print ("El número "+str(numero)+" es igual a "+str(cambio_base(numero, base))+" en sistema binario")    #Se imprime el resultado de la operación
+    print ("El nÃºmero "+str(numero)+" es igual a "+str(cambio_base(numero, base))+" en sistema binario")    #Se imprime el resultado de la operaciÃ³n
 
 #Exponente
 #Luis Enrique Romero Leyva
 def EXP(Valores):
     Valores=int(raw_input("Introduzca el numero elevar: "))                     #Se ingresa el numero a elevar
     Exponente=int(raw_input("Introduzca el numero a elevar: "))                 #Se ingresa la potencia a la que e quiere elevar
-    resultado=Valores**Exponente                                                #Se realiza la operación de elevar el numero a la potencia
+    resultado=Valores**Exponente                                                #Se realiza la operaciÃ³n de elevar el numero a la potencia
     print str(Valores)+" a la "+str(Exponente)+" es igual a "+str(resultado)    #Se imprime el resultado
 
 
@@ -353,3 +410,6 @@ while not salir:
 
     if funcion[0]=="EXP":
         EXP(0)
+
+    if funcion[0]=="HD":
+        HD(0)
