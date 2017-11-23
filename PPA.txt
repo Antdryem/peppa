@@ -222,16 +222,38 @@ def EXP(Valores):
 
 def MUL(nmul):                                                        #Multiplicacion
     print ("Multiplicacion: \n")
-    nmul=float(raw_input("Cuantos valores desea multiplicar?"))
+    error=False
+    nmul=raw_input("Cuantos valores desea multiplicar?")
     r=1
-    if nmul == 1 :                                                    #evita que se ponga un solo numero para multiplicar
-        print ("Se necesitan al menos dos valores")
-        nmul=0
-    while(nmul != 0):
-        x=float(raw_input("Numero:"))
-        r=float(r)*x
-        nmul=float(nmul)-1
-    print ("El resultado es: ")+str(r)
+    entry=[]
+    digitos=0
+    numeros=["1","2","3","4","5","6","7","8","9","0"]
+    for e in nmul:
+        if (not e in numeros):                                           #evita que no se introduzcan numeros en el numero de valores a multiplicar
+            raw_input("Se necesita introducir un numero")
+        
+        elif (nmul == "1" or nmul == "0" or nmul == ""):                                #evita que se ponga un solo numero para multiplicar
+            print ("Se necesitan al menos dos valores")
+            nmul=0
+        else:
+            while (nmul != 0):
+                nmul=float(nmul)
+                x=raw_input("Numero:")
+                nmul=float(nmul)-1
+                digitos=digitos+1
+                y=list(x)
+                for d in y:                                                    #evita que se introduzcan cosas diferentes a numeros en la multiplicacion
+                    if (not d in numeros):
+                        print ("Debe introducirse un numero")
+                        error=True
+                        break
+                if(error == False):                                            #se resuelve la multiplicacion
+                    x=float(x)
+                    r=float(r)*x
+                else:
+                    break
+            if(error == False):
+                print ("El resultado es: ")+str(r)
 
 def RZ(inp):                                                          #Raices
     print ("Raices: \n")

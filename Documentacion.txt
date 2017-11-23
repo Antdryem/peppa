@@ -69,6 +69,9 @@
 
 	Agregados comentarios.
 	En proceso de arreglar errores (no terminado)
+--Semana del 20-24 de Noviembre--
+	Arreglados los errores en la funcion de multiplicacion}
+	Agregados los comentarios correspondientes al codigo nuevo
 
 >>> Hitshiro
 Reporte de la Segunda semana de Noviembre
