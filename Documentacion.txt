@@ -1,4 +1,4 @@
->>>Emilio Antón:
+﻿>>>Emilio Antón:
 
 	Funcion Binario a Hexadecimal:
 		
@@ -107,3 +107,8 @@ Reporte de la Segunda semana de Noviembre
 Reporte semanal del 13 al 17
 Comentatios:
 	Se agregaron los comentarios al codigo de las funciones y se intentó iniciar el manejo de errores. 
+
+Reporte semanal del 20 al 24
+Manejo de errores:
+	Se agregaron lineas de codigo para asegurarse de que el programa no dejara de ejecutarse al encontrar
+	un error
