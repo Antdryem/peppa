@@ -234,58 +234,70 @@ def EXP(Valores):
 ##########david
 
 
-def MUL(nmul):                                                        #Multiplicacion
-    print ("Multiplicacion: \n")
-    nmul=float(raw_input("Cuantos valores desea multiplicar?"))
-    r=1
-    if nmul == 1 :                                                    #evita que se ponga un solo numero para multiplicar
-        print ("Se necesitan al menos dos valores")
-        nmul=0
-    while(nmul != 0):
-        x=float(raw_input("Numero:"))
-        r=float(r)*x
-        nmul=float(nmul)-1
-    print ("El resultado es: ")+str(r)
+def MUL():                                                                 #Multiplicacion
+    try:
+        print ("Multiplicacion: \n")
+        nmul=float(raw_input("Cuantos valores desea multiplicar?"))
+        if(nmul < 0):                                                   #impide que se introduzca un numero negativo en "cantidad de numeros a multiplicar"
+            print ("Introduzca un numero positivo")
+        r=1
+        if nmul == 1 :                                                       #se piden al menos dos valores para multiplicar
+            print ("Se necesitan al menos dos valores")
+            nmul=0
+        while(nmul != 0):
+            x=float(raw_input("Numero:"))
+            r=float(r)*x
+            nmul=float(nmul)-1
+        print ("El resultado es: ")+str(r)
+    except ValueError:                                                   #si va a crashear, escribe "fak u" en vez de crashear
+        print ("fak u (operacion imposible)")
 
 def RZ(inp):                                                          #Raices
-    print ("Raices: \n")
-    inp=raw_input("Inserte numero y exponente: ").split()
-    n=int(inp[0])
-    if(len(inp) == 1):                                     #si se da un exponente, es por default 2
-        exp=2
-    else:
-        exp=int(inp[1])
-    if(n >= 0):
-        r=""
-        if(exp >= 0):
-            r=n**(1.0/exp)
-            print ("El resultado es: ")+str(r)
+    try:
+        print ("Raices: \n")
+        numeros=["1","2","3","4","5","6","7","8","9","0"]
+        inp=raw_input("Inserte numero y exponente: ").split()
+        n=int(inp[0])
+        if(len(inp) == 1):                                     #si se da un exponente, es por default 2
+            exp=2
         else:
-            print("Favor de introducir un exponente positivo")        #evitar operaciones imposibles
-    elif(n < 0): 
-        if(exp % 2 == 0 ):
-            print("El resultado es un numero imaginario")             
-        else:
+            exp=int(inp[1])
+        if(n >= 0):
             r=""
             if(exp >= 0):
-                print("Favor de introducir un numero positivo")
+                r=n**(1.0/exp)
+                print ("El resultado es: ")+str(r)
             else:
-                print("Favor de introducir un exponente positivo")
-            
-            print ("El resultado es: ")+str(r)
+                print("Favor de introducir un exponente positivo")        #evitar operaciones imposibles       |
+        elif(n < 0):                                                      #                                    v 
+            if(exp % 2 == 0 ):
+                print("El resultado es un numero imaginario")             
+            else:
+                r=""
+                if(exp >= 0):
+                    print("Favor de introducir un numero positivo")
+                else:
+                    print("Favor de introducir un exponente positivo")
+    
+                print ("El resultado es: ")+str(r)
+    except ValueError:
+        print ("Y yo soy el presidente (operacion imposible)")             #si va a crashear, escribe "Y yo soy el presidente" en vez de crashear
 
 def PRI(input):                                          #numeros primos en un rango definido
-    print "Numeros primos en un rango: \n"
-    input= raw_input("Inserte los limites inferior y superior: ").split()
-    numero1=int(input[0])
-    numero2=int(input[1])
-    for x in range(numero1,numero2+1):
-        contador = 0
-        for num in range(1,x+1):
-            if (x % num == 0):
-                contador = contador + 1
-        if (contador==2):
-            print "El numero "+str(x)+" es primo"
+    try:
+        print "Numeros primos en un rango: \n"
+        input= raw_input("Inserte los limites inferior y superior: ").split()
+        numero1=int(input[0])
+        numero2=int(input[1])
+        for x in range(numero1,numero2+1):                                #se calcula en cada numero del rango
+            contador = 0
+            for num in range(1,x+1):                                       #se calcula si el numero es primo
+                if (x % num == 0):
+                    contador = contador + 1
+            if (contador==2):                                                 #imprime solo los primos
+                print "El numero "+str(x)+" es primo"
+    except ValueError:
+        print("ai laic boterfais (operacion imposible)")                 #si va a crashear, escribe "I like butterflies" en vez de crashear
 
 
 salir=False;

@@ -72,6 +72,9 @@
 --Semana del 20-24 de Noviembre--
 	Arreglados los errores en la funcion de multiplicacion}
 	Agregados los comentarios correspondientes al codigo nuevo
+--Semana del 27 Nov-1 Dic--
+	Arreglados errores en las 3 funciones que me tocaron
+	Agregados los comentarios correspondientes 
 
 >>> Hitshiro
 Reporte de la Segunda semana de Noviembre
