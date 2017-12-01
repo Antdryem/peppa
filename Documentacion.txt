@@ -91,6 +91,10 @@ Reporte Tercera semana de Noviembre
 3- Hexadecimal a decimal:
 	esta funcion convierte los numeros hexadecimales a decimales
 	solo aceptando numeros y las letras de A a la F
+Reporte Cuarta semana de Noviembre
+	Corregir errores para que no crachee las funciones
+	y poner comentarios de que hace cada parte del codigo
+	con ayuda de david
 	
 Yeah! Acabe
 >>> Luis

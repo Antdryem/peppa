@@ -157,27 +157,90 @@ salir=False
 
 ##################shiro
 
-def NP(X):
-    X=int(raw_input("Teclea el numero limite:"))
-    Contador=2
-    EsPrimo=True
-    Contador2=2
-    while(Contador2<X):
-        EsPrimo=True
-        Contador=2
-        while(Contador<Contador2):
-            if(Contador2 % Contador == 0):
-                EsPrimo=False 
-            Contador=Contador+1
-        if(EsPrimo):
-            print str(Contador2)+ " Es Primo"
-        Contador2=Contador2+1
+def NP():
+    try:
+        x=int(raw_input("Introduzca un numero: "))
+        contador = 0
+        for num in range(1,x+1):                                             #calcula la cantidad de divisores posibles
+            if (x % num == 0):
+                contador = contador + 1
+        if (contador==2):                                                     #si son 2, es primo
+            print "El numero "+str(x)+" es primo"
+        elif(contador ==1):
+            print("Introduzca un numero mayor al 1")                                #si es 1, tiene que haber sido el numero "1"
+        else:
+            print("El numero "+str(x)+" no es primo")                              #si tiene mas, no es primo
+    except ValueError:
+        print("sigue participando(no se puede)")                                   #si hubiera crasheado, imprime el mensaje
 
-def DIV(Divisor):
-	Divisor = int(raw_input("Escribe cuanto vale el divisor "))
-	Dividente = int(raw_input("Escribe cuanto vale el dividente "))
-	Resultado = Divisor/Dividente
-	print ("El resultado es " + str(Resultado))
+def DIV():
+    try:
+        Divisor = int(raw_input("Escribe cuanto vale el divisor "))
+        Dividente = int(raw_input("Escribe cuanto vale el dividente "))
+        if (Dividente==0):                                                         #evita dividir entre 0
+            print("sigue participando (no se puede dividir entre 0)")
+        else:
+            Resultado = Divisor/Dividente
+            print ("El resultado es " + str(Resultado))
+    except ValueError:
+        print("Input invalido")
+
+def HD():
+	A=10
+	B=11
+	C=12
+	D=13
+	E=14
+	F=15
+	lista_permitida=["1","2","3","4","5","6","7","8","9","0","A","B","C","E","F"]                           #define los inputs validos
+	lista_letras=["A","B","C","D","E","F"]                                                                  #  "     "    "       "
+	lista_hexa=[]
+	completo=False
+	suma=0
+	hexadecimiliador=16
+	sumador=0
+	comprobar=0
+	hexa=raw_input("Ingrese el numero hexadecimal: ").upper()
+	contador=int(len(hexa))-1
+	while(contador>=0):
+	    lista_hexa.append(hexa[contador])
+	    contador-=1
+	
+	while(comprobar<len(lista_hexa)):                                                         #comprueba que el input sea valido
+	    if(lista_hexa[comprobar] in lista_permitida):
+	        comprobar+=1
+	    else:
+	        lista_hexa=[]
+	        contador=0
+	        comprobar=0
+	        hexa=raw_input("Ingrese el numero hexadecimal: ").upper()
+	        contador=int(len(hexa))-1
+	        while(contador>=0):
+	            lista_hexa.append(hexa[contador])
+	            contador-=1
+	
+	
+	while (sumador<len(lista_hexa)):                                                                #resuelve
+	    if(lista_hexa[sumador] in lista_letras):
+	        if(lista_hexa[sumador] =="A"):
+	            suma+=(A*(hexadecimiliador**sumador))
+	        if(lista_hexa[sumador] =="B"):
+	            suma+=(B*(hexadecimiliador**sumador))
+	        if(lista_hexa[sumador] =="C"):
+	            suma+=(C*(hexadecimiliador**sumador))
+	        if(lista_hexa[sumador] =="D"):
+	            suma+=(D*(hexadecimiliador**sumador))
+	        if(lista_hexa[sumador] =="E"):
+	            suma+=(E*(hexadecimiliador**sumador))
+	        if(lista_hexa[sumador] =="F"):
+	            suma+=(F*(hexadecimiliador**sumador))
+	    else:
+	        suma+=(int(lista_hexa[sumador])*(hexadecimiliador**sumador))
+	    sumador+=1
+	print""
+	print""
+	print "El equivalente en decimal es: "+suma
+
 
 ################# luis
 
@@ -202,17 +265,17 @@ def SUM(numeros):
 #Luis Enrique Romero Leyva
 def BD(numero):
     try:
-        numero = int(raw_input("Introduzca el número a convertir: "))   #Introduce el numero que se desea convertir
+        numero = int(raw_input("Introduzca el nï¿½mero a convertir: "))   #Introduce el numero que se desea convertir
         base = 2                                                        #Se define que se va a cambiar a base 2 (Binario)
 
-        def cambio_base(decimal, base):                                 #Se define la operación para el cambio de base
+        def cambio_base(decimal, base):                                 #Se define la operaciï¿½n para el cambio de base
             conversion = ''
             while decimal // base != 0:
                 conversion = str(decimal % base) + conversion           
                 decimal = decimal // base
             return str(decimal) + conversion
 
-        print ("El número "+str(numero)+" es igual a "+str(cambio_base(numero, base))+" en sistema binario")    #Se imprime el resultado de la operación
+        print ("El nï¿½mero "+str(numero)+" es igual a "+str(cambio_base(numero, base))+" en sistema binario")    #Se imprime el resultado de la operaciï¿½n
     except ValueError:
         print "Se ha ingresado un caracter no valido, no se puede ejecutar la operacion"
         return
@@ -222,7 +285,7 @@ def EXP(Valores):
     try:
         Valores=int(raw_input("Introduzca el numero elevar: "))                     #Se ingresa el numero a elevar
         Exponente=int(raw_input("Introduzca el numero a elevar: "))                 #Se ingresa la potencia a la que e quiere elevar
-        resultado=Valores**Exponente                                                #Se realiza la operación de elevar el numero a la potencia
+        resultado=Valores**Exponente                                                #Se realiza la operaciï¿½n de elevar el numero a la potencia
         print str(Valores)+" a la "+str(Exponente)+" es igual a "+str(resultado)    #Se imprime el resultado
     except ValueError:
         print "Se ha ingresado un caracter no valido, no se puede ejecutar la operacion"
@@ -357,3 +420,7 @@ while not salir:
 
     if funcion[0]=="EXP":
         EXP(0)
+     
+    if funcion[0]=="HD":
+        EXP(0)
+    
