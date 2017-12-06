@@ -54,42 +54,42 @@ def BtH(orden, numero):
             
             x=x+1
 #convierte los digitos restantes del numero que se desea convertir
-        pene=""
+        penelope=""
         x=0
         while x<sobra:
             if numero[(largo-1)+x]=="1":
-                pene="1"+pene
+                penelope="1"+penelope
             else:
-                pene="0"+pene
+                penelope="0"+penelope
             x=x+1
 
-        if pene=="000":
+        if penelope=="000":
             resultado="0"+resultado
-        if pene=="001":
+        if penelope=="001":
             resultado="1"+resultado
-        if pene=="010":
+        if penelope=="010":
             resultado="2"+resultado
-        if pene=="011":
+        if penelope=="011":
             resultado="3"+resultado
-        if pene=="100":
+        if penelope=="100":
             resultado="4"+resultado
-        if pene=="101":
+        if penelope=="101":
             resultado="5"+resultado
-        if pene=="110":
+        if penelope=="110":
             resultado="6"+resultado
-        if pene=="111":
+        if penelope=="111":
             resultado="7"+resultado
-        if pene=="00":
+        if penelope=="00":
             resultado="0"+resultado
-        if pene=="01":
+        if penelope=="01":
             resultado="1"+resultado
-        if pene=="10":
+        if penelope=="10":
             resultado="2"+resultado
-        if pene=="11":
+        if penelope=="11":
             resultado="3"+resultado
-        if pene=="0":
+        if penelope=="0":
             resultado="0"+resultado
-        if pene=="1":
+        if penelope=="1":
             resultado="1"+resultado
     
         print resultado
