@@ -315,7 +315,7 @@ def MUL():                                                                 #Mult
     except ValueError:                                                   #si va a crashear, escribe "fak u" en vez de crashear
         print ("fak u (operacion imposible)")
 
-def RZ(inp):                                                          #Raices
+def RZ():                                                          #Raices
     try:
         print ("Raices: \n")
         numeros=["1","2","3","4","5","6","7","8","9","0"]
@@ -346,7 +346,7 @@ def RZ(inp):                                                          #Raices
     except ValueError:
         print ("Y yo soy el presidente (operacion imposible)")             #si va a crashear, escribe "Y yo soy el presidente" en vez de crashear
 
-def PRI(input):                                          #numeros primos en un rango definido
+def PRI():                                          #numeros primos en un rango definido
     try:
         print "Numeros primos en un rango: \n"
         input= raw_input("Inserte los limites inferior y superior: ").split()
@@ -398,29 +398,31 @@ while not salir:
         BtH(funcion[1], funcion[2])
 
     if funcion[0]=="NP":
-        NP(0)
+        NP()
 
     if funcion[0]=="BD":
-        BD(0)
+        BD(numero)
 
     if funcion[0]=="SUM":
-        SUM(0)
+        SUM(numeros)
 
     if funcion[0]=="MUL":
-        MUL(0)
+        MUL()
 
     if funcion[0]=="RZ":
-        RZ(0)
+        RZ()
 
     if funcion[0]=="DIV":
         DIV(0)
 
     if funcion[0]=="PRI":
-        PRI(0)
+        PRI()
 
     if funcion[0]=="EXP":
-        EXP(0)
+        EXP(Valores)
      
     if funcion[0]=="HD":
-        EXP(0)
-    
+        EXP()
+
+    if funcion[0]=="DIV":
+        DIV()
